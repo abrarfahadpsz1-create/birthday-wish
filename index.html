@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mim Birthday - 5 Feb</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Titan+One&family=Sriracha&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="main-content">
+            <div class="flags">
+                <img src="./images/1.png" class="f-left">
+                <img src="./images/1.png" class="f-right">
+            </div>
+            <div class="center-content">
+                <h1 class="hb-title">Happy<br>Birthday</h1>
+                <div class="date-tag">5 February</div>
+                <button id="btn__letter">Click Here Mim <i class="fa-regular fa-envelope"></i></button>
+                <div class="photo-area">
+                    <img src="./images/unnamed.png" class="profile-img">
+                    <div class="name-label">Dear Mim</div>
+                    <img src="./images/balloon1.png" class="bal b1">
+                    <img src="./images/balloon2.png" class="bal b2">
+                </div>
+            </div>
+            <img src="./images/smiley_icon.png" class="smiley">
+        </div>
+
+        <div class="boxMail" id="mailBox">
+            <i class="fa-solid fa-xmark" id="closeMail"></i>
+            <div class="mail-container" id="openCard">
+                <div class="card-front">
+                    <img src="./images/unnamed.png" class="mini-p">
+                    <h3>To Mim</h3>
+                    <p>Tap to Open ❤️</p>
+                </div>
+                <div class="card-inside">
+                    <p>শুভ জন্মদিন মিম! ৫ই ফেব্রুয়ারি আপনার জীবনে অনেক সুখ নিয়ে আসুক। ❤️</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="cake-section" class="hidden">
+            <div id="countdown">5</div>
+            <div class="cake-box">
+                <div class="candle"><div class="flame" id="flame"></div></div>
+                <img src="./images/main-cake.png" class="cake-img">
+            </div>
+            <p class="instr">মোমবাতিতে ফু (ক্লিক) দাও!</p>
+        </div>
+
+        <div id="final-wish" class="hidden">
+            <img src="./images/unnamed.png" class="final-p">
+            <h2>শুভ জন্মদিন মিম! 🎉</h2>
+            <div class="gift-area">
+                <img src="./images/slice-cake.png" class="slice-img">
+                <img src="./images/mewmew.gif" class="cat-gif">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

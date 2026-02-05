@@ -1,0 +1,55 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    background-color: #feecea; 
+    background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px);
+    background-size: 25px 25px; /* আপনার ছবির মতো গ্রিড ব্যাকগ্রাউন্ড */
+    overflow: hidden; height: 100vh; font-family: 'Sriracha', cursive;
+}
+#wrapper { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; text-align: center; }
+
+/* মেইন লেআউট */
+#main-content { width: 95%; position: relative; }
+.flags { position: absolute; top: 0; width: 100%; display: flex; justify-content: space-between; left: 0; z-index: -1; }
+.flags img { width: 90px; }
+.f-right { transform: scaleX(-1); }
+
+.hb-title { font-family: 'Titan One', sans-serif; font-size: 2.2rem; color: #FF7882; text-shadow: 2px 2px white; margin-top: 50px; }
+.date-tag { background: #FF7882; border: 2px solid #333; padding: 5px 20px; border-radius: 20px; font-weight: bold; margin: 10px 0; display: inline-block; }
+#btn__letter { background: #FF7882; border: 2px solid #333; padding: 10px 20px; border-radius: 50px; color: white; cursor: pointer; }
+
+/* প্রোফাইল ফটো সাইজ ফিক্স (ছবি 1000061675 এর সমস্যা সমাধান) */
+.photo-area { position: relative; width: 180px; margin: 20px auto; }
+.profile-img { width: 180px; height: 180px; border-radius: 50%; border: 5px solid #333; object-fit: cover; background: white; }
+.name-label { background: #FF7882; border: 2px solid #333; padding: 5px 20px; border-radius: 20px; margin-top: -15px; position: relative; z-index: 5; }
+
+.bal { position: absolute; width: 50px; z-index: -1; }
+.b1 { top: 0; left: -30px; animation: float 3s infinite; }
+.b2 { bottom: 20px; right: -30px; animation: float 3s infinite reverse; }
+@keyframes float { 50% { transform: translateY(-10px); } }
+.smiley { width: 45px; position: absolute; bottom: -30px; left: 0; }
+
+/* ৩ডি চিঠি (ছবি 1000061673 এর মতো) */
+.boxMail { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: none; justify-content: center; align-items: center; z-index: 100; }
+.mail-container { width: 280px; height: 380px; perspective: 1000px; position: relative; }
+.card-front, .card-inside { position: absolute; inset: 0; border: 2px solid #FF7882; border-radius: 10px; backface-visibility: hidden; }
+.card-front { background: #FF7882; z-index: 2; transform-origin: left; transition: 1.2s; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; }
+.card-inside { background: #fffdf5; z-index: 1; padding: 25px; display: flex; align-items: center; font-family: 'Dancing Script', cursive; font-size: 1.3rem; }
+.mail-container.open .card-front { transform: rotateY(-145deg); } /* ক্লিক করলে খুলবে */
+
+.mini-p { width: 60px; border-radius: 50%; border: 2px solid white; margin-bottom: 10px; }
+.fa-xmark { position: absolute; top: 15px; right: 15px; color: white; font-size: 30px; }
+
+/* রিয়েলিস্টিক মোমবাতি */
+.candle { width: 12px; height: 40px; background: #FF7882; margin: 0 auto; position: relative; border-radius: 5px; }
+.flame {
+    width: 16px; height: 26px; background: linear-gradient(white, yellow, orange, red);
+    border-radius: 50% 50% 20% 20%; position: absolute; top: -24px; left: -2px;
+    box-shadow: 0 0 15px orange; animation: flicker 0.1s infinite; cursor: pointer;
+}
+@keyframes flicker { 100% { transform: scale(1.1); } }
+.hidden { display: none; }
+#countdown { font-size: 5rem; color: #FF7882; font-family: 'Titan One'; }
+.cake-img { width: 180px; }
+.final-p { width: 150px; border-radius: 50%; border: 5px solid #FF7882; }
+.slice-img { width: 110px; }
+.cat-gif { width: 70px; display: block; margin: 10px auto; }
